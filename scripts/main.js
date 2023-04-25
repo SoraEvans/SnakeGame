@@ -7,16 +7,14 @@ const config = { //  основные настройки игры
     sizeCell: 16, // размер одной ячейкми
     sizeBerry: 16 / 4 // размер ягоды
 }
-
 const snake = {
     x: 16,
     y: 16,
     dx: config.sizeCell, // скорость змейки по вертикали и горизонтали
     dy: 0,
     tail: [], // массив ячеек, которые занимает змейка
-    maxTail: 3 // количество этих ячеек?
+    maxTail: 3 // количество этих ячеек
 }
-
 const berry = {
     x: 0,
     y: 0
@@ -27,7 +25,8 @@ let context = canvas.getContext('2d');
 scoreBlock = document.querySelector('.game-score .score-count');
 drawScore();
 
-function gameLoop() { // игровой цикл
+// игровой цикл
+function gameLoop() {
 
     requestAnimationFrame(gameLoop); // бесконечный вызов gameLoop
     if (++config.step < config.maxStep) {
@@ -63,9 +62,9 @@ function drawSnake() {
     */
     snake.tail.forEach(function (el, index) {
         if (index === 0) {
-            context.fillStyle = '#FA0556'; // красим голову змеи
+            context.fillStyle = '#8405fa'; // красим голову змеи
         } else {
-            context.fillStyle = '#A00034'; // красим тело
+            context.fillStyle = '#52009b'; // красим тело
         }
         context.fillRect(el.x, el.y, config.sizeCell, config.sizeCell);
 
@@ -115,11 +114,11 @@ function refreshGame() {
 
     randomPositionBerry();
 }
-
 // функция отрисовки ягоды
 function drawBerry() {
+
     context.beginPath();
-    context.fillStyle = '#A00034'; // назначаем цвет
+    context.fillStyle = '#b1ff0e'; // назначаем цвет
     // рисуем окружность на основе координат ягоды
     context.arc(
         berry.x + (config.sizeCell / 2),

@@ -29,9 +29,10 @@ body {
 }
 
 .game-score {
+    box-sizing: border-box;
     padding: 10px 15px;
-    min-width: 160px;
-    height: 50px;
+    min-width: 340px;
+    height: 60px;
     background: #121214;
     border-radius: 5px;
 
@@ -41,8 +42,8 @@ body {
 }
 
 .score-count {
-    font-size: 3vmin;
-    color: #D21855;
+    font-size: 4vmin;
+    color: #8405fa;
     font-weight: bold;
 }
 
@@ -50,7 +51,7 @@ body {
     background-color: #161618;
     border-radius: 5px;
     border: 10px solid #161618;
-    box-shadow: 0 0 40px 10px #161618;
+    box-shadow: 0 0 60px 10px #161618;
 
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23525053'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
